@@ -29,7 +29,7 @@ db:
   user: u668734560_wikijs
   pass: Rrd%jA5@@NR5
   db: u668734560_wiki
-  ssl: false
+  ssl: true
 
   # Optional - PostgreSQL / MySQL / MariaDB only:
   # -> Uncomment lines you need below and set `auto` to false
