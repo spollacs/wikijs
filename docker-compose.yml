@@ -14,7 +14,7 @@ services:
       - db-data:/var/lib/postgresql/data
 
   wiki:
-    image: spollacs/wiki
+    image: spollacs/wikijs
     depends_on:
       - db
     environment:
