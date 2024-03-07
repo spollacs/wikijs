@@ -14,19 +14,14 @@ services:
       - db-data:/var/lib/postgresql/data
 
   wiki:
-    image: git@github.com:spollacs/wikijs.git
-    depends_on:
-      - db
-    environment:
-      DB_TYPE: postgres
-      DB_HOST: db
-      DB_PORT: 5432
-      DB_USER: wiki
-      DB_PASS: 2GVej3IauGl5
-      DB_NAME: wiki
-    restart: unless-stopped
-    ports:
-      - "30000:3000"
+services:
+  git:
+    image: wiki:latest
+    container_name: wiki
+    build: .
+    command: git -C /build clone https://github.com/spollacs/wikijs.git
+    volumes:
+      - ./build:/build
 
 volumes:
   db-data:
