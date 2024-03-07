@@ -14,7 +14,6 @@ services:
       - db-data:/var/lib/postgresql/data
 
   wiki:
-services:
   git:
     image: wiki:latest
     container_name: wiki
